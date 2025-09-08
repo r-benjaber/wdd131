@@ -1,7 +1,7 @@
 * {
     margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,12 +10,142 @@ body {
 
 }
 
-header{
-background-color: olivedrab;
+header {
+    background-color: olivedrab;
+}
+
+header span {
+    display: block;
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    font-weight: 400;
+    padding: 0.5rem;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    flex: 1 1 auto;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+nav a:hover {
+    background-color: white;
+    color: olivedrab;
+    border: 1px solid darkgreen;
+
 }
 
 h1 {
     font-weight: 100;
     display: block;
     text-align: center;
+    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+
+    color: olivedrab;
+    text-decoration: underline;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 1rem;
+    height: 84vh;
+
+    margin: 0 auto;
+}
+
+.card {
+    grid-row: 2/3;
+    border: 2px solid darkgreen;
+    margin: 1rem;
+    padding: 2rem;
+    width: auto;
+    border-radius: 20px;
+    background-color: #F0F8E2;
+}
+
+#card1 {
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 0.2fr 4fr;
+}
+
+#card2 {
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#card2 h2{
+    text-align: center;
+}
+
+footer {
+    display: block;
+    text-align: center;
+    background-color: olivedrab;
+    color: white;
+    padding: 1rem;
+}
+
+.likesList{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    list-style: none;
+    height: 100%;
+}
+
+.likesList li{
+    flex: 1;
+}
+
+.likesList li a{
+    text-decoration: none;
+    color: black;
+}
+
+.likesList li a:hover{
+    text-decoration: underline;
+    color: olivedrab;
+}
+
+.card img {           
+    margin-right: 1rem;     
+    border-radius: 15px;    
+    width: 150px;           
+    height: auto;
+}
+
+#card1 h2{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    text-align: center;
+
+}
+
+#card1 p{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    align-self: center;
+}
+
+#card1 img{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    align-self: center;
+    justify-self: end;
 }
