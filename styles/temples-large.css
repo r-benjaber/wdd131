@@ -1,0 +1,33 @@
+@media screen and (min-width: 32rem){
+    #menu {
+        display: none;
+    }
+
+    nav {
+        flex-direction: row;     
+        justify-content: space-around; 
+        align-items: center;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .navigation li{
+        display: block;
+        flex: 1;
+    }
+
+    .navigation a{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+}
