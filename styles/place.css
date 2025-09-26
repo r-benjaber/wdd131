@@ -44,6 +44,10 @@ h2{
     color: white;    
 }
 
+section img{
+    align-self: center;
+}
+
 @media screen and (min-width: 32rem){
 
     body{
@@ -94,7 +98,7 @@ h2{
         display: none;
     }
 
-    main section:last-of-type h2::before{
+    main section:last-of-type h2::after{
         content: '🌤️';
     }
 }
