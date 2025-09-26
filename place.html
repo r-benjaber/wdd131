@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta name="description" content="A page to put in practice principles of responsive images and layouts">
+    <meta name="author" content="Benjamin Bernal">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Paraguay</h1>
+    </header>
+    <main>
+        <picture id="heroimg">
+            <source srcset="images/asuncion-wide.webp" media="(min-width: 681px)">
+            <img src="images/asuncion.webp" alt="A picture from above of the city of Asuncion." width="680">
+        </picture>
+        <section>
+            <h2>Data</h2>
+            <p>
+                Area: 406.752 km²<br>
+                Population: 6.109.644<br>
+                Capital: Asuncion<br>
+                Languages: Español, Guaraní<br>
+                Currency: Guaraníes<br>
+                Time Zone: GMT-3<br>
+                Calling Code: +595<br>
+                Intenet TLD: .py<br>
+            </p>
+        </section>
+        <section>
+            <h2><img id="weatherIco" src="images/sunshine.svg" alt="Weather Icom" width="40">Weather</h2>
+            <p id="weatherInfo"></p>
+        </section>
+    </main>
+    <footer>
+        <p>© <span id="currentYear"></span> - Rodrigo Benjamin Bernal Romero - Asunción, Paraguay</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
