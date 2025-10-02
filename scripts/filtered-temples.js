@@ -108,29 +108,35 @@ const old = document.querySelector("#old");
 const newT = document.querySelector("#new");
 const large = document.querySelector("#large");
 const small = document.querySelector("#small");
+const subtitle = document.querySelector("#subtitle")
 
 home.addEventListener("click", () => {
     createTempleCard(temples);
+    subtitle.textContent = "All Temples";
 })
 
 old.addEventListener("click", () => {
     const filteredTemples = temples.filter(temple => temple.dedicated.split(", ")[0] < 1900);
     createTempleCard(filteredTemples);
+    subtitle.textContent = "Old Temples";
 })
 
 newT.addEventListener("click", () => {
     const filteredTemples = temples.filter(temple => temple.dedicated.split(", ")[0] > 2000);
     createTempleCard(filteredTemples);
+    subtitle.textContent = "New Temples";
 })
 
 large.addEventListener("click", () => {
     const filteredTemples = temples.filter(temple => temple.area > 90000);
     createTempleCard(filteredTemples);
+    subtitle.textContent = "Large Temples";
 })
 
 small.addEventListener("click", () => {
     const filteredTemples = temples.filter(temple => temple.area < 10000);
     createTempleCard(filteredTemples);
+    subtitle.textContent = "Small Temples";
 })
 
 function createTempleCard(templeList) {
